@@ -70,7 +70,7 @@ const DynamicNavbar = ({ currentPage, setCurrentPage }) => {
           {/* Logo */}
           <button 
             onClick={() => handleLinkClick('home')}
-            className="flex items-center space-x-2.5 group focus:outline-none cursor-pointer"
+            className="flex items-center group focus:outline-none cursor-pointer"
           >
             <div className="relative overflow-hidden transition-transform duration-500 group-hover:scale-105">
               <img 
@@ -79,11 +79,6 @@ const DynamicNavbar = ({ currentPage, setCurrentPage }) => {
                 className="h-12 md:h-14 w-auto object-contain rounded bg-white p-0.5 shadow-sm border border-river-blue/5" 
               />
             </div>
-            <span className={`font-serif text-xl md:text-2xl tracking-wider ${
-              showSolidNav ? 'text-river-blue' : 'text-white'
-            } group-hover:text-gold transition-colors duration-300 font-bold`}>
-              RIVERSIDE
-            </span>
           </button>
 
           {/* Desktop Nav Links */}
