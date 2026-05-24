@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+@theme {
+  --color-river-dark: #031422;
+  --color-river-blue: #072B49;
+  --color-river-light: #0b3d68;
+  --color-river-accent: #0e528c;
+  --color-gold-light: #f5d68b;
+  --color-gold: #D9A441;
+  --color-gold-dark: #a8781e;
+  --color-royal: #FFFFFF;
+
+  --font-playfair: 'Calibri', 'Segoe UI', Arial, sans-serif;
+  --font-inter: 'Calibri', 'Segoe UI', Arial, sans-serif;
+}
+
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility wave-underline {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #D9A441;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
+  background-color: #FFFFFF;
+  color: #072B49;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #072B49;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-serif, button, select, input, textarea {
+  font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F9FAF9;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9A441;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a8781e;
+}
+
+/* Glassmorphism Styles (Adjusted for Light Theme) */
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(7, 43, 73, 0.08);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(7, 43, 73, 0.05);
+}
+
+.glass-heavy {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(217, 164, 65, 0.25);
+}
+
+.glass-gold {
+  background: rgba(217, 164, 65, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(217, 164, 65, 0.2);
+}
+
+/* Custom Utilities & Animations */
+.glow-gold {
+  box-shadow: 0 0 25px rgba(217, 164, 65, 0.15);
+}
+
+.glow-gold-hover:hover {
+  box-shadow: 0 0 35px rgba(217, 164, 65, 0.3);
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(217, 164, 65, 0.3);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #072B49 0%, #D9A441 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-river-gradient {
+  background: linear-gradient(135deg, #D9A441 0%, #072B49 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Leaflet Map Bright Theme Overrides */
+.leaflet-container {
+  background: #F9FAF9 !important;
+  font-family: 'Calibri', 'Segoe UI', Arial, sans-serif !important;
+}
+
+/* Clean, standard bright maps - no inversion filters */
+.leaflet-tile-container img {
+  filter: grayscale(10%) contrast(100%) !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: rgba(255, 255, 255, 0.98) !important;
+  color: #072B49 !important;
+  border: 1px solid #D9A441 !important;
+  backdrop-filter: blur(8px) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.leaflet-popup-tip {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border: 1px solid #D9A441 !important;
+}
+
+/* Custom Steam Animation for Chef Section */
+@keyframes steam {
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-20px) scaleX(1.2);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-40px) scaleX(0.8);
+    opacity: 0;
+  }
+}
+
+.steam-particle {
+  animation: steam 3s ease-out infinite;
+}
