@@ -61,6 +61,22 @@ h1, h2, h3, h4, .font-serif, button, select, input, textarea {
   font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
 }
 
+h2 {
+  --text-2xl: 1.75rem; /* original: 1.5rem (24px) */
+  --text-3xl: 2.25rem; /* original: 1.875rem (30px) */
+  --text-4xl: 3rem;    /* original: 2.25rem (36px) */
+  --text-5xl: 3.75rem; /* original: 3rem (48px) */
+  --text-6xl: 4.5rem;  /* original: 3.75rem (60px) */
+}
+
+h3 {
+  --text-base: 1.15rem; /* original: 1rem (16px) */
+  --text-lg: 1.3rem;    /* original: 1.125rem (18px) */
+  --text-xl: 1.5rem;    /* original: 1.25rem (20px) */
+  --text-2xl: 1.75rem;  /* original: 1.5rem (24px) */
+  --text-3xl: 2.25rem;  /* original: 1.875rem (30px) */
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

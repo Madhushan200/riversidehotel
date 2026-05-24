@@ -79,7 +79,7 @@ const DynamicNavbar = ({ currentPage, setCurrentPage }) => {
                 className="h-10 md:h-11 w-auto object-contain rounded bg-white p-0.5 shadow-sm border border-river-blue/5" 
               />
             </div>
-            <span className={`font-serif text-lg md:text-xl tracking-wider ${
+            <span className={`font-serif text-xl md:text-2xl tracking-wider ${
               showSolidNav ? 'text-river-blue' : 'text-white'
             } group-hover:text-gold transition-colors duration-300 font-bold`}>
               RIVERSIDE
@@ -92,7 +92,7 @@ const DynamicNavbar = ({ currentPage, setCurrentPage }) => {
               <button
                 key={link.id}
                 onClick={() => handleLinkClick(link.id)}
-                className={`text-xs font-bold tracking-widest uppercase transition-all duration-300 cursor-pointer focus:outline-none ${
+                className={`text-sm font-bold tracking-widest uppercase transition-all duration-300 cursor-pointer focus:outline-none ${
                   currentPage === link.id
                     ? 'text-gold border-b-2 border-gold pb-1 font-bold'
                     : `${showSolidNav ? 'text-river-blue/80' : 'text-white/85'} hover:text-gold pb-1 hover:border-b-2 hover:border-gold/30`
@@ -107,7 +107,7 @@ const DynamicNavbar = ({ currentPage, setCurrentPage }) => {
           <div className="hidden lg:block">
             <button
               onClick={() => handleLinkClick('contact')}
-              className="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-river-dark bg-gold hover:bg-gold-dark hover:text-white transition-all duration-300 hover:scale-105 active:scale-95 shadow-md hover:shadow-gold/20 glow-gold-hover"
+              className="px-5 py-2.5 rounded-full text-sm font-bold uppercase tracking-wider text-river-dark bg-gold hover:bg-gold-dark hover:text-white transition-all duration-300 hover:scale-105 active:scale-95 shadow-md hover:shadow-gold/20 glow-gold-hover"
             >
               Book Now
             </button>
