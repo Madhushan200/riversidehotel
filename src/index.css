@@ -48,7 +48,7 @@ html {
   background-color: #FFFFFF;
   color: #072B49;
   overflow-x: hidden;
-  font-size: 106.25%; /* Scales base size to 17px to make all fonts a little bigger */
+  font-size: 112.5%; /* Scales base size to 18px to make all fonts 2px bigger */
 }
 
 body {
